@@ -1,0 +1,1489 @@
+{
+  "v_mitra_knowledge_base": {
+    "metadata": {
+      "version": "1.1",
+      "generated_on": "2025-06-06T13:00:00+05:30",
+      "source": "V-Mitra User Guide (English V3 PDF)",
+      "description": "Comprehensive JSON representation of the V-Mitra User Guide, including all sections, subsections, screenshot descriptions, tables, examples, and chatbot intent/entity mappings."
+    },
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "Introduction",
+        "purpose": "Explain what V-Mitra is, why it exists, and how citizens help monitor electricity distribution.",
+        "items": [
+          {
+            "id": "what_is_v_mitra",
+            "title": "What is V-Mitra?",
+            "content": "A digital platform (“audit of the people, by the people, for the people”) that lets citizens observe, verify, and report irregularities in the electricity distribution system. Goal: Reduce commercial losses, promote transparency, and involve end-users directly in vigilance."
+          },
+          {
+            "id": "core_concepts",
+            "title": "Core Concepts",
+            "subitems": [
+              {
+                "title": "Mitigation of Irregularities",
+                "content": "Early detection of issues like theft, tampering, unauthorized connections."
+              },
+              {
+                "title": "Resource Agents",
+                "content": "Registered users who report issues in exchange for nominal compensation."
+              },
+              {
+                "title": "Audit",
+                "content": "System uses GIS tagging, connected-load data, consumer indexing; social audit by citizens improves accuracy."
+              },
+              {
+                "title": "Citizen Role",
+                "content": "Report meter tampering, hook-ups, illegal extensions, excess loads; help MPEZ catch and correct faults more efficiently."
+              }
+            ]
+          },
+          {
+            "id": "why_v_mitra",
+            "title": "Why V-Mitra in Power Distribution?",
+            "content": "Rising demand plus persisting irregularities requires public participation. Empowers users to flag electricity theft, meter bypass, unauthorized connections, and use of unauthorized loads."
+          },
+          {
+            "id": "citizen_strength",
+            "title": "How Citizens Strengthen the System",
+            "content": "Keep an eye on electricity use around them and flag illegal or malicious activity (e.g., meter tampering, hooking, direct extensions) to support fair usage by reporting."
+          }
+        ]
+      },
+      {
+        "id": "about_app_objectives",
+        "title": "About V-Mitra App & Its Objectives",
+        "purpose": "Describe high-level design and objectives—how the app ties into Digital India goals and MPEZ’s vigilance strategy.",
+        "subsections": [
+          {
+            "id": "background",
+            "title": "Background",
+            "content": "Commercial losses due to misuse prompted MPEZ to blend internal teams with citizen volunteers via V-Mitra. Emphasizes internal vigilance plus citizen participation for transparency."
+          },
+          {
+            "id": "digital_india_alignment",
+            "title": "Alignment with Digital India",
+            "items": [
+              {
+                "title": "Access to Consumer Data",
+                "content": "Non-sensitive connection info available to registered users."
+              },
+              {
+                "title": "Guided Reporting Interface",
+                "content": "Step-by-step flow; no technical expertise required."
+              },
+              {
+                "title": "Status Tracking",
+                "content": "Users can view “Pending / In Progress / Resolved” for every submission."
+              },
+              {
+                "title": "Secure Reporting",
+                "content": "Built on encrypted channels; no complex documents needed."
+              }
+            ]
+          },
+          {
+            "id": "key_objectives",
+            "title": "Key Objectives",
+            "items": [
+              {
+                "content": "Early detection of theft, tampering, unauthorized loads → reduce losses."
+              },
+              {
+                "content": "Provide structured, evidence-based inputs to vigilance teams."
+              },
+              {
+                "content": "Simplify citizen reporting via mobile app."
+              },
+              {
+                "content": "Improve transparency by giving users real-time status and verified consumer data."
+              },
+              {
+                "content": "Build trust with a visible reward mechanism (instant notifications, bank transfers)."
+              }
+            ]
+          },
+          {
+            "id": "disclaimer",
+            "title": "Disclaimer (Legal)",
+            "content": "App provisions approved by MPPKVVCL’s Board of Directors. All disputes subject to Jabalpur courts."
+          }
+        ]
+      },
+      {
+        "id": "key_features",
+        "title": "Key Features",
+        "purpose": "Summarize major UI/UX components and functional capabilities of V-Mitra.",
+        "features": [
+          {
+            "id": "design_accessibility",
+            "title": "Design & Accessibility",
+            "content": "Simple interface with clear icons and linear flows. Available on Android 8.0+ and iOS devices; also accessible via desktop browser."
+          },
+          {
+            "id": "geo_tagging",
+            "title": "Geo-Tagging & Location-Based Reporting",
+            "description": "Automatically capture GPS coordinates when submitting."
+          },
+          {
+            "id": "photo_upload",
+            "title": "Photo Upload (Evidence)",
+            "description": "Users can attach one or more images (e.g., tampered meter, hooking)."
+          },
+          {
+            "id": "category_reporting",
+            "title": "Category-Based Reporting",
+            "subitems": [
+              "Power Theft",
+              "Meter Tampering",
+              "Billing Irregularities (Incorrect Reading, Wrong MF, etc.)",
+              "Excess Load",
+              "Illegal Extension",
+              "Incorrect Consumer Indexing",
+              "Geo-coordinates error",
+              "Use under Different Tariff",
+              "More Than One Connection",
+              "Solar Meter Reading Errors"
+            ]
+          },
+          {
+            "id": "status_tracking",
+            "title": "Information Status Tracking",
+            "description": "After submission, users see “Pending → In Progress → Resolved.”"
+          },
+          {
+            "id": "anonymous_reporting",
+            "title": "Anonymous Reporting Option",
+            "description": "Users can choose to “Remain Confidential.” If “Disclose Identity” is untoggled, name and mobile not shared with field team."
+          },
+          {
+            "id": "notifications",
+            "title": "Timely Notifications",
+            "description": "Real-time push or SMS alerts when status changes."
+          },
+          {
+            "id": "other_features",
+            "title": "Other Notable Features",
+            "bullet_points": [
+              "One-time registration; no documents required for reporting.",
+              "Reward paid directly into bank account once information verified.",
+              "Entire workflow—from submission to reward transfer—happens within the app.",
+              "Consumer details available both in the mobile app and on MPEZ’s official website.",
+              "Option to appeal within 7 days if user/field officer disagrees with resolution."
+            ]
+          }
+        ],
+        "screenshots": [
+          {
+            "id": "s1",
+            "title": "Registration/Welcome Screen",
+            "description": "Top bar: “V-Mitra” logo and “Menu” icon. Center: Two large buttons: “Submit Information” and “View Consumer Data.” Bottom: “Help” and “Terms & Conditions.” Once “Submit Information” is tapped, phone’s GPS prompt appears."
+          },
+          {
+            "id": "s2",
+            "title": "Photo Upload Flow",
+            "description": "Camera preview at top; “Capture/Upload” button below. After capturing, a small thumbnail gallery shows multiple attachments. “Preview” and “Delete” icons on each thumbnail. A “Description” text box below, then “Next →” button to proceed."
+          },
+          {
+            "id": "s3",
+            "title": "Irregularity Selection",
+            "description": "Radio buttons or checkboxes next to each category. When tapping a category, a pop-up appears: Brief definition at top, fields to enter specifics, camera icon to attach photos."
+          },
+          {
+            "id": "s4",
+            "title": "Dashboard Status List",
+            "description": "A list of “My Submissions,” each row: Information ID, Date submitted, Category, Status tag (color-coded), arrow to “Details.” A filter at top: “Show All / Pending / In Process / Resolved / Rejected.”"
+          },
+          {
+            "id": "s5",
+            "title": "Confidentiality Prompt",
+            "description": "Checkbox: “I agree to disclose my identity.” Warning: “If checked, Checking Team may contact you directly. If unchecked, remain anonymous.”"
+          },
+          {
+            "id": "s6",
+            "title": "Sample SMS Notification",
+            "description": "“Your V-Mitra submission (#12345) status changed to ‘In Progress.’ Visit app for details.”"
+          }
+        ]
+      },
+      {
+        "id": "user_categories_roles",
+        "title": "User Categories & Roles",
+        "purpose": "Define who can use the app, what they see, and what actions they can perform.",
+        "roles": [
+          {
+            "id": "unregistered_user",
+            "title": "Unregistered Users",
+            "permissions": [
+              "View a limited consumer database (read-only).",
+              "See app overview, help, terms & conditions.",
+              "Cannot submit any information."
+            ]
+          },
+          {
+            "id": "registered_user",
+            "title": "Registered Users (“Resource Agents”)",
+            "permissions": [
+              "Must verify mobile number via OTP (one-time registration).",
+              "After login, can submit new information (with or without IVRS).",
+              "Track status of past submissions.",
+              "Edit “View Profile” info (bank details only before reward).",
+              "Eligible for rewards if submitted info is verified and accepted."
+            ]
+          },
+          {
+            "id": "checking_officer",
+            "title": "Checking Officers (MPEZ Staff)",
+            "permissions": [
+              "Receive and preliminarily screen each submission.",
+              "Conduct field verification (“In Progress” step).",
+              "Update status to Verified/Rejected.",
+              "Initiate reward evaluation for valid cases.",
+              "View PII if user opted to disclose identity; otherwise, remain anonymous."
+            ]
+          },
+          {
+            "id": "field_officer",
+            "title": "Field Officers",
+            "permissions": [
+              "Carry out on-site inspection.",
+              "Confirm physical evidence, take additional photos, fill digital notes.",
+              "Update system (via web interface) to mark findings (valid/invalid)."
+            ]
+          },
+          {
+            "id": "admin_user",
+            "title": "Admin Users (MPEZ HQ)",
+            "permissions": [
+              "Oversee entire V-Mitra operations, roles, and permissions.",
+              "Monitor data accuracy and system health.",
+              "Generate analytics/reports on submission trends.",
+              "Manage escalation to higher authorities for appealed cases."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "getting_started_registration",
+        "title": "Getting Started and Registration",
+        "purpose": "Step-by-step walkthrough of how a new user downloads, registers, and configures their profile (especially bank details).",
+        "subsections": [
+          {
+            "id": "device_compatibility_download",
+            "title": "Device Compatibility & App Download",
+            "content": "Supported Devices: Android 8.0 (Oreo) and above; iOS (modern versions). Users install from Google Play Store (Android) or App Store (iOS). On desktop, users can access a web portal at a specific MPEZ URL."
+          },
+          {
+            "id": "app_interface_post_download",
+            "title": "App Interface (Post-Download)",
+            "screenshot": {
+              "id": "s7",
+              "title": "Home Screen",
+              "description": "Top banner: “Welcome to V-Mitra” and “Profile” icon in top right corner. Center: Four large clickable tiles:\n1. Consumer Database → “View Consumer Info.”\n2. Submit Information → “Report Irregularity.”\n3. Track Status → “My Submissions.”\n4. Help & Guidelines → “How It Works.”\nBottom navigation bar: “Home | Search | Submit | Profile.”"
+            }
+          },
+          {
+            "id": "registration_flow",
+            "title": "Registration Flow",
+            "steps": [
+              {
+                "step": 1,
+                "title": "Enter Basic Details",
+                "screenshot": {
+                  "id": "s8",
+                  "title": "Registration Form",
+                  "description": "Fields:\n- Username (text).\n- Email (text; optional).\n- Mobile Number (mandatory for OTP).\n- Profile Photo (optional; camera icon to take/upload).\nButton: “Generate OTP” (disabled until valid mobile)."
+                }
+              },
+              {
+                "step": 2,
+                "title": "OTP Verification",
+                "screenshot": {
+                  "id": "s9",
+                  "title": "OTP Screen",
+                  "description": "Six separate input boxes for each digit. “Resend OTP” timer/countdown. “Submit” button."
+                }
+              },
+              {
+                "step": 3,
+                "title": "Post-OTP Login",
+                "content": "After OTP, user lands in “Profile Setup” (some fields prefilled). They can immediately view “Consumer Data,” but “Submit Info” is disabled until bank details are filled (if they wish for rewards)."
+              },
+              {
+                "step": 4,
+                "title": "Upload Bank Details (for Rewards)",
+                "screenshot": {
+                  "id": "s10",
+                  "title": "Bank Details Screen",
+                  "description": "Fields (all mandatory for reward):\n- Name on Aadhar (must match exactly).\n- Account Number (Aadhar-linked).\n- IFSC Code (dropdown or text).\n- Aadhaar Number (12-digit).\nButton: “Save.”\nWarnings: Users are solely responsible for accuracy. MPEZ will not verify bank details; failed transfers due to mismatch are final."
+                }
+              }
+            ]
+          },
+          {
+            "id": "profile_details_editing",
+            "title": "Profile Details & Editing",
+            "content": "Users can edit username, email, and profile photo anytime. Once bank data is under process for a particular submission, changing bank details affects only future rewards. Important Note: If user changes bank details while one submission is “Pending Reward,” the reward goes to the details on record when that submission’s reward was processed."
+          }
+        ]
+      },
+      {
+        "id": "reporting_paths",
+        "title": "Reporting Information (IVRS Available vs. Not Available)",
+        "purpose": "Show two distinct flows: when the IVRS (unique consumer ID) is known vs. unknown.",
+        "subsections": [
+          {
+            "id": "app_usage_clarification",
+            "title": "Clarification on App Usage",
+            "content": "V-Mitra is strictly for vigilance: reporting irregularities, not billing disputes or general grievance redressal. Users with billing errors, faulty meters, or supply issues should contact 1912 (toll-free) or the “Nidaan” grievance portal."
+          },
+          {
+            "id": "ivrs_available_path",
+            "title": "When IVRS Is Available",
+            "flow": [
+              {
+                "step": 1,
+                "action": "Tap “Submit Information” on Home Screen.",
+                "detail": "App requests user to input IVRS number (10-digit).",
+                "screenshot": {
+                  "id": "s11",
+                  "title": "IVRS Input Screen",
+                  "description": "Text box labeled: “Enter IVRS Number.” Buttons: “Find IVRS” (opens search page) and “Submit.”"
+                }
+              },
+              {
+                "step": 2,
+                "action": "Search for IVRS (if user doesn’t know exact number)",
+                "screenshot": {
+                  "id": "s12",
+                  "title": "“Find IVRS” Screen",
+                  "description": "1. Search by Consumer List: Dropdowns: Circle → Division → Distribution Center → Tariff Category. After selecting, “Submit” shows a list of consumers (IVRS, name, address).\n2. Search on Company Map: Opens embedded map (OpenLayers/Google Maps). User zooms to area; taps a pin; selects Tariff Category; list of consumers near pin appears.\n3. Search by Current Location: Uses phone GPS to find all consumers within 50 m radius; pops up list of consumers with matching Tariff Category.\n4. Consumer Profile Using IVRS: Paste IVRS and hit “Go.”\n5. Consumer Search on Map Using IVRS: Enter IVRS; map centers on that consumer’s location."
+                }
+              },
+              {
+                "step": 3,
+                "action": "Fetch Consumer Details",
+                "screenshot": {
+                  "id": "s13",
+                  "title": "Consumer Info Screen",
+                  "description": "Displays:\n- IVRS, Consumer address (text), Region, Circle, Division, Location (e.g., DC name), Tariff Category (Domestic/Commercial/Agriculture/etc.), Purpose of installation, Sanctioned Load.\nBelow: “Select Irregularity” button."
+                }
+              },
+              {
+                "step": 4,
+                "action": "Select Irregularity(ies)",
+                "screenshot": {
+                  "id": "s14",
+                  "title": "Irregularity Selection List",
+                  "items": [
+                    "Geo-Coordinates Not Found / Found Incorrect",
+                    "Incorrect Consumer Indexing",
+                    "Excess Load",
+                    "Use Under a Different Tariff",
+                    "More Than One Connection at Same Premises",
+                    "Meter Tampering / Bypass",
+                    "Unauthorized Extension of Power Supply",
+                    "Electricity Theft / Illegal Connection / Direct Hooking",
+                    "Incorrect Meter Reading",
+                    "Incorrect Solar Meter Reading",
+                    "Wrong Multiplying Factor (MF)",
+                    "Others"
+                  ],
+                  "description": "A user may select multiple checkboxes. Each selection immediately opens a new sub-screen to gather details and evidence."
+                }
+              },
+              {
+                "step": 5,
+                "action": "Fill Irregularity Details & Attach Evidence",
+                "description": "For each irregularity selected, the app displays:\n- A descriptive definition at top (e.g., “Geo-Coordinates Not Found/Incorrect: submit if system coordinates deviate > 100 m from actual site”).\n- Text field: “Describe Irregularity (mandatory).”\n- Camera icon: “Upload Photo” (one or more).\n- Location viewer: “Show system GPS vs. actual GPS.”\nAfter uploading and describing, tap “Submit Info” (for that irregularity). Once all selected irregularities are completed, the user is taken to a “Review & Final Submit” screen."
+              },
+              {
+                "step": 6,
+                "action": "Review & Disclaimer",
+                "screenshot": {
+                  "id": "s15",
+                  "title": "Review & Disclaimer Screen",
+                  "description": "Shows summary of:\n1. IVRS\n2. Consumer details\n3. List of irregularities with thumbnails of each uploaded photo\n4. Description text snippets.\nTwo checkboxes at bottom:\n1. “I confirm all information is accurate.”\n2. “I agree to disclose my identity” (optional).\nBelow that: “Submit All” button. If “Agree to disclose identity” is checked, a pop-up: “You may be contacted by Checking Team. Proceed?” (“Yes/No”). Once “Submit All” is tapped, the app shows “Submission Successful” + unique Information ID."
+                }
+              },
+              {
+                "step": 7,
+                "action": "Post-Submission",
+                "description": "User is redirected to “My Submissions” with the newly added entry (status = PENDING)."
+              }
+            ]
+          },
+          {
+            "id": "ivrs_not_available_path",
+            "title": "When IVRS Is Not Available",
+            "flow": [
+              {
+                "step": 1,
+                "action": "Tap “IVRS Not Available” on the “Submit Information” menu",
+                "description": "App auto-fetches GPS location (latitude/longitude).",
+                "screenshot": {
+                  "id": "s16",
+                  "title": "No IVRS Submission Screen",
+                  "description": "Top: “No IVRS? Submit Directly.” Shows: current GPS coordinates, timestamp. Drop-down: “Type of Irregularity” limited to: Direct Hooking, Illegal Connection, Electricity Theft. Drop-down: “Type of Premise” (Residential/Shop/Industry/Warehouse/Marriage Garden/Farmhouse/Restaurant/Dhaba/Others). Camera icon: “Upload Photo of Premises/Main Entrance.” Text field: “Description (mandatory).” Checkbox: “I confirm I am at the site and IVRS is unavailable.” “Submit” button."
+                }
+              },
+              {
+                "step": 2,
+                "action": "Flow",
+                "description": "User confirms they are physically present. App tags GPS coords, attaches photo, collects premise type and description. Tapping “Submit” leads to the same Review & Disclaimer step (with fewer fields), then final submission."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "irregularity_categories",
+        "title": "Reporting Information – Types of Irregularities",
+        "purpose": "For each irregularity category, define applicability, acceptance criteria, examples, and common user mistakes, so the chatbot can warn users or clarify requirements.",
+        "categories": [
+          {
+            "id": "geo_coordinates_not_found",
+            "title": "Geo-Coordinates Not Found / Incorrect",
+            "definition": "Applies when the consumer’s GPS coordinates in the MPEZ system are either missing or more than 100 m off from the true location.",
+            "applicability": [
+              {
+                "scenario": "System has no geo-coordinates stored",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "System coordinates place consumer > 100 m away from actual",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Deviation ≤ 100 m",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "User not at site (no photo/accurate location)",
+                "acceptance": "No"
+              }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "House No. 122 (IVRS 6677889900) is in Arya Nagar, but system shows Raja Bazar (~750 m away).",
+                "steps": [
+                  "Enter IVRS 6677889900.",
+                  "App fetches system coordinates (Raja Bazar).",
+                  "Select “Geo-Coordinates Not Found/Incorrect.”",
+                  "Upload a timestamped photo at the actual house showing visible landmarks (e.g., street sign).",
+                  "In description: “Actual location: House No. 122, Arya Nagar; system shows Raja Bazar (~750 m away).”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User opens app at home without visiting site, enters IVRS 5544332211, uploads random street photo, writes “location seems wrong.”",
+                "reasons_for_rejection": [
+                  "No on-site verification.",
+                  "Photo does not match actual premise.",
+                  "Lacks coordinates vs. ground-photo correlation."
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Please ensure you are physically at the consumer’s location before reporting.",
+              "Upload a timestamped photo showing the premises with visible landmarks to confirm actual location.",
+              "Make sure your phone’s GPS is enabled so the app can tag exact coordinates accurately."
+            ]
+          },
+          {
+            "id": "incorrect_consumer_indexing",
+            "title": "Incorrect Consumer Indexing",
+            "definition": "Occurs when a meter/consumer is tagged under the wrong Feeder or DTR in MPEZ’s database.",
+            "applicability": [
+              {
+                "scenario": "Consumer in database shows DTR A, but actual supply from DTR B",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Consumer shows Feeder X, but actually on Feeder Y",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Temporary reconnection to another DTR (e.g., fault repair)",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Information filed without correct feeder/DTR details",
+                "acceptance": "No"
+              }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "Neighbor’s IVRS 9988776655 appears under Feeder 15, but is actually fed by Feeder 18.",
+                "steps": [
+                  "Enter IVRS 9988776655.",
+                  "App shows Feeder: 15 & DTR: 03.",
+                  "Select “Incorrect Consumer Indexing.”",
+                  "Upload a clear photo of the meter board showing feeder tags (if visible), or get field officer’s confirmation document/photo.",
+                  "In description: “Consumer physically connected to Feeder 18 (meter board shows connections to Feeder 18).”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User assumes consumer is wrongly indexed just by looking at the house, says “Feeder seems wrong, check once.”",
+                "reasons_for_rejection": [
+                  "No factual feeder/DTR details provided.",
+                  "Lacks evidence (no photo of meter board or feeder tags).",
+                  "Vague description without verification."
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Do you know which feeder or DTR the consumer is actually connected to? Please confirm (check meter board or ask field officer).",
+              "Upload a clear image of the meter board or transformer nameplate showing feeder/DTR labels to support your claim."
+            ]
+          },
+          {
+            "id": "excess_load",
+            "title": "Excess Load (Connected Load > Sanctioned Load)",
+            "definition": "Applies when actual connected load at the premises exceeds the sanctioned load by a significant margin. Minor variances (< 1 kW) or temporary increases (construction) are not accepted.",
+            "applicability": [
+              {
+                "scenario": "Sanctioned 1 kW; Estimated actual 6 kW (visual assessment)",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Sanctioned 3 kW; Actual 4 kW (minor variance < 1 kW)",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Minor increase for construction/renovation",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "No photo of premises or evidence",
+                "acceptance": "Case by case"
+              }
+            ],
+            "load_reference_table": [
+              { "appliance": "Single fluorescent tube light", "load_watts": 55 },
+              { "appliance": "Computer – Laptop", "load_watts": 60 },
+              { "appliance": "Incandescent bulb", "load_watts": 60 },
+              { "appliance": "Ceiling fan", "load_watts": 80 },
+              { "appliance": "Television (TV)", "load_watts": 120 },
+              { "appliance": "Audio system", "load_watts": 120 },
+              { "appliance": "Air cooler", "load_watts": 200 },
+              { "appliance": "Refrigerator (small)", "load_watts": 250 },
+              { "appliance": "Refrigerator (medium)", "load_watts": 350 },
+              { "appliance": "Vacuum cleaner", "load_watts": 400 },
+              { "appliance": "Washing machine", "load_watts": 500 },
+              { "appliance": "Mixer/Blender", "load_watts": 500 },
+              { "appliance": "Refrigerator (large)", "load_watts": 600 },
+              { "appliance": "Submersible water pump (1 HP)", "load_watts": 746 },
+              { "appliance": "Oven Toaster Griller (OTG)", "load_watts": 800 },
+              { "appliance": "Water immersion rod", "load_watts": "1000–1500" },
+              { "appliance": "Induction cooker", "load_watts": 1000 },
+              { "appliance": "Electric iron", "load_watts": 1000 },
+              { "appliance": "Hair dryer", "load_watts": 1000 },
+              { "appliance": "Microwave oven", "load_watts": 1200 },
+              { "appliance": "Window AC (1.0 TR)", "load_watts": 1500 },
+              { "appliance": "Window AC (1.5 TR)", "load_watts": 2000 },
+              { "appliance": "Split AC (1.0 TR)", "load_watts": 2000 },
+              { "appliance": "Split AC (1.5 TR)", "load_watts": 2500 },
+              { "appliance": "Water heater – storage type", "load_watts": 1500 },
+              { "appliance": "Water heater – instant", "load_watts": 3000 }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "Commercial shop with sanctioned load 1 kW, but user sees multiple ACs and heavy lighting; estimates ~5 kW.",
+                "steps": [
+                  "Enter IVRS 6677889900.",
+                  "App fetches sanctioned load: 1 kW.",
+                  "Select “Excess Load.”",
+                  "Upload a clear, timestamped photo showing installed equipment (2 ACs, commercial lighting).",
+                  "In description: “Estimated actual load ~5 kW; sanctioned load 1 kW. Equipment indicates clear excess.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User claims excess load at a home with one fridge and a cooler.",
+                "reasons_for_rejection": [
+                  "No photo of major load-drawing equipment.",
+                  "No estimated appliance list or wattages provided (only fridge + cooler is minor).",
+                  "Lacks clear evidence that actual load significantly exceeds sanctioned load."
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Please estimate the connected load by listing major appliances (e.g., ACs, pumps) and approximate their wattages.",
+              "Upload clear, timestamped photos showing the number and type of load-drawing appliances at the premises."
+            ]
+          },
+          {
+            "id": "use_under_different_tariff",
+            "title": "Use Under a Different Tariff Than Sanctioned",
+            "definition": "Occurs when a consumer uses electricity under a tariff category (e.g., Domestic, Agriculture) for a different purpose (e.g., shop, restaurant).",
+            "applicability": [
+              {
+                "scenario": "Residential connection used to run shop/office/small industry",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Agricultural connection used for commercial water supply, dhaba, etc.",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Marriage garden powered by domestic connection",
+                "acceptance": "Yes"
+              }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "Tailoring shop under domestic connection (House No. 45, IVRS 1122334455), signboard visible, stitching machines running.",
+                "steps": [
+                  "Enter IVRS 1122334455.",
+                  "App fetches tariff: Domestic.",
+                  "Select “Use under Different Tariff.”",
+                  "Upload a clear photo of the shop signboard and machines in use.",
+                  "In description: “Shop operating under domestic meter. Clearly commercial usage.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User just “assumes” neighbor might run a home business because there’s an oven and people occasionally visit.",
+                "reasons_for_rejection": [
+                  "No clear evidence of business activity (no signage or customers visible).",
+                  "No documentation or invoices showing commercial usage.",
+                  "Vague description: “They may be selling food.”"
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Please capture a photo showing a signboard or clear evidence of business activity (e.g., customers, inventory).",
+              "Mention what evidence you have that electricity is used for commercial purposes (e.g., business signage, equipment, customers)."
+            ]
+          },
+          {
+            "id": "more_than_one_connection",
+            "title": "More Than One Connection in the Same Premises",
+            "definition": "Two or more active electricity connections found in the same premises without valid separation documents (rent agreement, partition deed).",
+            "applicability": [
+              {
+                "scenario": "Two or more connections in one premises without valid documentation (rent deed)",
+                "acceptance": "Yes"
+              }
+            ],
+            "notes": "If there are valid rent agreements, notarized partition deeds, or ownership documents showing sub-division, the case is not treated as irregular.",
+            "examples": {
+              "valid_case": {
+                "description": "Neighbor’s single-family house has two domestic meters; no tenant residing separately.",
+                "steps": [
+                  "Enter IVRS 4455667788 (pick either meter among the two).",
+                  "App fetches tariff: Domestic.",
+                  "Select “More Than One Connection in the Same Premises.”",
+                  "Upload clear photos showing both meters installed side by side on the same property.",
+                  "In description: “Two active domestic meters in one house. No tenants or separate documentation.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User sees three meters in a three-storey house but does not verify tenancy or rent agreements.",
+                "reasons_for_rejection": [
+                  "May be valid separate apartments with rent agreements.",
+                  "No evidence provided (no rent agreements or owner statements).",
+                  "Vague description: “Three floors—must be extra meters.”"
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Please check if the other meter has a valid rent agreement or authorized partition deed.",
+              "Upload photos of all meters clearly installed at the same building, and provide any tenancy or partition documents if available."
+            ]
+          },
+          {
+            "id": "meter_tampering_bypass",
+            "title": "Meter Tampering / Bypass",
+            "definition": "Deliberate tampering or bypass (e.g., external magnets, broken seals, wires bypassing meter terminals) to record less consumption or no consumption.",
+            "applicability": [
+              {
+                "scenario": "Meter shows no or low consumption but evidence shows bypassed wiring",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Broken seals + external device or magnet attached to meter",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Polarity reversed by interchanging wires",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Meter cover cracked but functioning normally (no bypass)",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Consumption mismatch with no visible signs of tampering",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "User uploads unclear photo without visible tampering",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Use of old (electro-mechanical) meter with no tampering",
+                "acceptance": "Yes"
+              }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "Shop’s meter shows zero consumption; user sees a bright red bypass wire connecting line directly to outgoing side of meter.",
+                "steps": [
+                  "Enter IVRS 9988112233.",
+                  "Select “Meter Tampering / Bypass.”",
+                  "Upload a clear, close-up photo showing the bypass wire hooking around or under the meter box.",
+                  "In description: “Red bypass wire connected under meter, bypassing meter terminals.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User sees a neighbor’s dusty meter from a distance, assumes it’s not working, and uploads a distant photo of the meter box.",
+                "reasons_for_rejection": [
+                  "No clear visual proof of bypass or tampering (wires not visible).",
+                  "No check of meter reading vs. actual usage.",
+                  "Vague description: “Meter looks old and dusty—may be tampered.”"
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Make sure to capture a close-up photo of the meter showing broken seals, exposed wires, or bypass loops clearly visible.",
+              "Check the meter reading versus actual usage readings (if possible) before concluding tampering."
+            ]
+          },
+          {
+            "id": "unauthorized_extension",
+            "title": "Unauthorized Extension of Power Supply to Another Premise",
+            "definition": "Illegal extension of a consumer’s connection to supply power to another house, shop, godown, or unit without a separate meter or authorization.",
+            "applicability": [
+              {
+                "scenario": "Domestic connection extended illegally to a separate premise with no separate meter",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Shop A feeding power to Shop B with direct wire without separate meter",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "No photo of premises or incorrect details provided",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Unauthorized shifting of meter to a different premise",
+                "acceptance": "Yes"
+              }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "Shop A (IVRS 8899776655) feeding power to Shop B via an open wire; Shop B has no separate meter.",
+                "steps": [
+                  "Enter IVRS 8899776655.",
+                  "Select “Unauthorized Extension of Power Supply.”",
+                  "Choose “Shop” as premise type.",
+                  "Upload a clear photo showing Shop A’s meter board and the visible wire extending to Shop B’s premises.",
+                  "In description: “Shop A (IVRS 8899776655) extending supply illegally to Shop B via an open wire; Shop B has no separate meter.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User sees two houses sharing a common pole but does not verify if both have separate meters or proper documentation.",
+                "reasons_for_rejection": [
+                  "No verification if both premises have separate authorized meters.",
+                  "No clear photo showing the interconnection wiring.",
+                  "Vague description without evidence."
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Please upload a photo clearly showing the wire linking the two premises without a separate meter.",
+              "Ensure both premises’ meter boards (or absence thereof) are visible to confirm unauthorized extension."
+            ]
+          },
+          {
+            "id": "electricity_theft_illegal_connection",
+            "title": "Electricity Theft / Illegal Connection / Direct Hooking / Unauthorized Use After Disconnection",
+            "definition": "Drawing electricity without permission via hooking wires from LT/HT lines, tapping supply pre-meter (even if IVRS/meter exists), reconnecting after disconnection, or using electricity at a location with no registered IVRS or meter.",
+            "applicability": [
+              {
+                "scenario": "Hooking from LT line to temporary shop (no IVRS)",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Active IVRS, but meter bypassed—supply drawn directly from mains",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Agricultural consumer illegally reconnects after disconnection without authorization",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Tapping supply before meter terminals even with IVRS present",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Cable hanging from pole with unclear connection (no evidence)",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Connection extension covered under “Unauthorized Extension” category",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Unauthorized use after official disconnection",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Use of streetlight or pump house without meter; switch visible in consumer premise or pole",
+                "acceptance": "Yes"
+              }
+            ],
+            "additional_requirements": "Must choose one premise type: Residential, Shop, Industry, Warehouse, Marriage Garden, Farmhouse, Restaurant/Dhaba, Others.",
+            "examples": {
+              "valid_case_with_ivrs": {
+                "description": "Warehouse (IVRS 6655442211) is hooked directly from an HT line via a visible looped wire; no meter display observed.",
+                "steps": [
+                  "Enter IVRS 6655442211.",
+                  "Select “Electricity Theft / Illegal Connection.”",
+                  "Premise type: “Warehouse.”",
+                  "Upload a clear photo showing the looped wire from the HT line connecting to the warehouse premises bypassing the meter.",
+                  "In description: “Warehouse running load bypassing meter using a red looped wire from HT line.”"
+                ]
+              },
+              "valid_case_no_ivrs": {
+                "description": "Roadside dhaba near a temple uses direct hooking from an LT pole; no meter seen at the dhaba premises.",
+                "steps": [
+                  "Tap “Submit Information” → “IVRS Not Available.”",
+                  "Select “Electricity Theft / Illegal Connection.”",
+                  "Premise type: “Restaurant/Dhaba.”",
+                  "Upload a clear photo showing the hooking wire from the LT pole to the dhaba entrance.",
+                  "In description: “No meter at dhaba; hooking wire from LT pole providing direct supply.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User sees a locked meter box and assumes theft inside; uploads only an exterior photo of the meter box.",
+                "reasons_for_rejection": [
+                  "No visual proof of bypass, hooking, or tampering wires.",
+                  "Mere suspicion of locked box is insufficient without evidence.",
+                  "Vague description lacks specific details."
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Please submit a clear, timestamped photo showing the bypass or hooking wires before or after meter installation.",
+              "Confirm that the premises has no legitimate meter or IVRS before marking theft; otherwise, gather proof (e.g., field officer note)."
+            ]
+          },
+          {
+            "id": "incorrect_meter_reading",
+            "title": "Incorrect Meter Reading",
+            "definition": "Occurs when the bill reading (system-recorded) mismatches actual display on the meter at site (under-billing, skipped readings, typographical errors).",
+            "applicability": [
+              {
+                "scenario": "Bill shows 100 units; actual meter shows 300 units (under-billing)",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Meter photo in system doesn’t match actual meter display",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Bill generated on average without photo visit (estimated billing)",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "No meter photo or digits from site (only verbal claim)",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Billing not proportional to sanctioned load",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Meter is installed and in use, but no bill generated",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Accumulation on meter causing under-recording",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Meter number mismatch in bill vs. actual physical meter",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Use of electricity via bypass + burnt meter (complicated scenario)",
+                "acceptance": "Yes"
+              }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "Shop’s bill (IVRS 9988776655) shows 265 units, but actual meter display shows 410 units at the time of visit.",
+                "steps": [
+                  "Enter IVRS 9988776655.",
+                  "Select “Incorrect Meter Reading.”",
+                  "Upload two photos side-by-side:\n  1. A clear, timestamped photo of the meter display showing 410 units.\n  2. A photo of the physical bill or system screenshot showing 265 units billed.",
+                  "In description: “Meter shows 410 units on 21 Oct 2024 at 5 PM; bill issued for 265 units. Please verify discrepancy.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User uses a months-old photo of meter and compares it to a current smart meter bill; “Old photo shows fewer units.”",
+                "reasons_for_rejection": [
+                  "No real-time validation; meter may have advanced readings since old photo.",
+                  "Smart meters auto-report—image-based check from old photo is obsolete.",
+                  "No latest, timestamped photo to correlate with billing date."
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Please take a live, timestamped photo of the meter reading right now, alongside the bill or system screenshot showing recorded units.",
+              "Ensure the date/time stamp is visible in the photo or EXIF metadata to verify recency."
+            ]
+          },
+          {
+            "id": "incorrect_solar_meter_reading",
+            "title": "Incorrect Solar Meter Reading",
+            "definition": "Occurs when the solar (net) meter reading in the billing system doesn’t match the actual meter display. This can lead to under- or over-recovery or incorrect net metering credits.",
+            "applicability": [
+              {
+                "scenario": "Solar system installed without MPEZ permission but net meter in place",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "No bidirectional meter installed but system shows bidirectional readings (generation vs. consumption)",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "CT reversal causing export readings at night",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Export units reported exceed installed solar capacity",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Reading taken from generation meter instead of net meter (incorrect meter used)",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "No photo or meter details provided (no evidence)",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "Inverter malfunction causing incorrect generation readings (meter is correct)",
+                "acceptance": "No"
+              }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "At a friend’s house (IVRS 2233445566), the solar net meter shows 135 export units, but the billing system shows only 100 units exported.",
+                "steps": [
+                  "Enter IVRS 2233445566.",
+                  "Select “Incorrect Solar Meter Reading.”",
+                  "Upload a clear, timestamped photo of the solar net meter display showing 135 units exported.",
+                  "Attach a copy/photo of the billing statement showing 100 export units.",
+                  "In description: “Net meter shows 135 export units on 4 Nov 2024; billing reflects only 100 units. Please verify.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User suspects a mismatch based solely on rooftop panels without verifying the actual meter reading.",
+                "reasons_for_rejection": [
+                  "No actual meter reading or photo of the meter display provided.",
+                  "No billing statement or system screenshot to compare with meter reading.",
+                  "Vague description: “Solar units seem wrong.”"
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Upload a close-up, timestamped photo of the net solar meter display showing current export units.",
+              "If possible, also attach a copy or screenshot of the billing statement showing recorded export units for comparison."
+            ]
+          },
+          {
+            "id": "wrong_multiplying_factor",
+            "title": "Wrong Multiplying Factor (MF)",
+            "definition": "MF is a constant used by CT/PT meters to convert raw meter counts into billing units. If the MF value is set incorrectly in the system, the consumption calculated for billing will be inaccurate, resulting in over-billing or under-billing.",
+            "applicability": [
+              {
+                "scenario": "CT-operated meter but bill shows very low consumption inconsistent with observed load",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "Billing shows MF = 1, but CT-operated meter’s MF should be greater than 1 (per label)",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "MF changed due to meter/CT/ME replacement, but system not updated",
+                "acceptance": "Yes"
+              },
+              {
+                "scenario": "LT domestic/commercial static meter (MF = 1) used incorrectly flagged as wrong MF",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "User files complaint based only on high bill amount without site photo or MF label",
+                "acceptance": "No"
+              },
+              {
+                "scenario": "No CT box or MF label visible in photo provided",
+                "acceptance": "No"
+              }
+            ],
+            "examples": {
+              "valid_case": {
+                "description": "Warehouse (IVRS 7788996655) has a CT-operated meter serving heavy loads, but billing shows only 500 units monthly despite evidence of higher consumption; MF not updated in system.",
+                "steps": [
+                  "Enter IVRS 7788996655.",
+                  "Select “Wrong Multiplying Factor (MF).”",
+                  "Upload a clear, timestamped photo of the meter’s CT panel showing CT connections and MF label (e.g., MF = 5).",
+                  "In description: “CT setup visible; system shows 500 units billed monthly despite heavy load. Suspect MF not updated properly.”"
+                ]
+              },
+              "invalid_case": {
+                "description": "User sees a high consumption bill (35,000 units) for a factory and assumes MF is wrong without any meter photo.",
+                "reasons_for_rejection": [
+                  "No site visit or actual meter photo showing MF label or CT panel.",
+                  "Assumption based solely on bill amount is insufficient.",
+                  "No CT box or meter photo provided to verify actual MF."
+                ]
+              }
+            },
+            "chatbot_prompts": [
+              "Upload a clear, timestamped image of the meter box showing CT connections and the MF value plate.",
+              "Describe any visible labeling (e.g., CT ratio, MF number) on the meter assembly so we can verify."
+            ]
+          },
+          {
+            "id": "others_irregularity",
+            "title": "Others",
+            "definition": "Catch-all category for any other irregularities not explicitly listed above, such as wrong consumer name, duplicate IVRS assignment, or billing formula errors (rare).",
+            "possible_examples": [
+              "Wrong consumer name in database vs. actual meter board",
+              "Duplicate IVRS assignment detected in system",
+              "Billing formula or tariff calculation errors (rare but possible)"
+            ],
+            "reward": 250,
+            "unit": "₹ per information",
+            "chatbot_guidance": "If user selects “Others,” ask for detailed description and attach any supporting photos or documents. Suggest that they choose one of the 11 defined categories if applicable, and the bot can help classify their issue."
+          }
+        ]
+      },
+      {
+        "id": "information_handling_workflow",
+        "title": "Information Handling & Verification Process",
+        "purpose": "Lay out the internal MPEZ workflow after a user submits information. A chatbot should be able to explain what happens next, how long it takes, and what the user sees.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Information Submission (What the System Records)",
+            "content": "Data Captured: \n  • IVRS (if provided)\n  • Category of irregularity (one or more)\n  • GPS coordinates (auto-tagged)\n  • Description (user text)\n  • Images (evidence)\n  • Identity preference (anonymous/disclosed)\n  • Date & time of submission\nOutcome: Unique Information ID assigned (e.g., #VMI-20240601-0001).",
+            "screenshot": {
+              "id": "s17",
+              "title": "Submission Confirmation",
+              "description": "“Your submission has been received.” \nInfo ID, Date/Time, Status = “Pending.” \nButtons: “View My Submissions,” “Submit Another.”"
+            }
+          },
+          {
+            "step": 2,
+            "title": "Acknowledgment & Internal Tagging",
+            "content": "User receives:\n  • In-app acknowledgment: “Submission received. Info ID: X.”\n  • SMS: “Thank you for reporting. Your Info ID is X; status = Pending.”\nSystem auto-tags the submission based on category (e.g., “Meter Tampering → Route to Checking Team A”)."
+          },
+          {
+            "step": 3,
+            "title": "Preliminary Screening (Checking Team Reviews)",
+            "content": "Checks performed by Checking Team:\n  • Completeness (all mandatory fields and photos uploaded?)\n  • Validity of GPS coordinates vs. description (do they match actual location?)\n  • Clarity of evidence (are photos legible and timestamped?)\nPossible Outcomes:\n  1. “Rejected” if submission is insufficient or vague (reason provided to user).\n  2. “In Progress” if submission is sufficient; routed to Field Officer for on-ground verification."
+          },
+          {
+            "step": 4,
+            "title": "Field Verification (On-Ground Team)",
+            "content": "Field Officer activities:\n  • Visit site with a mobile device or laptop.\n  • Physically inspect meter board, feeder, DTR, hooking, etc.\n  • Capture field photos, readings, and notes.\n  • Use Field Officer App Interface (tabs): “View Assigned Cases,” “Capture Photos,” “Enter Findings,” “Update Status.”\n  • For each case, check initial evidence, enter confirmed status (Valid/Invalid), attach additional field-verified images."
+          },
+          {
+            "step": 5,
+            "title": "Status Update & Action Initiation",
+            "content": "If verified valid:\n  • System updates case status to “Verified.”\n  • Initiate corrective action (route to Engineering or Enforcement as needed).\nIf invalid:\n  • System updates case status to “Rejected.”\n  • Field Officer enters a reason (e.g., “No bypass found,” “Coordinates match within 50 m”).\nUser sees: “In Progress” → “Resolved” or “Rejected.”",
+            "screenshot": {
+              "id": "s18",
+              "title": "User Dashboard—Progress Updates",
+              "description": "Horizontal timeline view with nodes:\n  1. Submitted (MM/DD/YYYY HH:MM)\n  2. In Progress (Checked by Team) (MM/DD/YYYY HH:MM)\n  3. Verified / Rejected (MM/DD/YYYY HH:MM)\nFor “Verified”: “Corrective action initiated.”\nFor “Rejected”: “Reason: ______.”"
+            }
+          },
+          {
+            "step": 6,
+            "title": "Reward Evaluation (If Applicable)",
+            "content": "If the case is marked valid and falls under a reward category:\n  • Checking Team computes reward based on the category’s rate.\n  • System sends “Reward Eligibility” notification to user (in-app and SMS).\n  • If user opted anonymous, reward is still processed to their registered bank account.\n  • If bank details are missing, the system prompts: “Add bank details to receive reward.”"
+          },
+          {
+            "step": 7,
+            "title": "Reward Transfer",
+            "content": "After the 7-day appeal window closes without any appeal:\n  • System initiates bank transfer of the computed reward amount.\n  • User sees updated status: “Reward: Yes,” “Reward Amount: ₹ X,” “Transfer: Pending” → “Completed.”\n  • A unique UTR (transaction reference) number and timestamp are recorded and displayed.\n  • User can view transfer details under “Reward Status.”",
+            "screenshot": {
+              "id": "s19",
+              "title": "Reward Status View",
+              "description": "Table listing each submission with columns:\n  • Info ID\n  • Date Submitted\n  • Category\n  • Status (Resolved)\n  • Reward (Yes/No)\n  • Amount (₹ X)\n  • Transfer Status (Pending/Completed)\n  • UTR No. and Timestamp of transfer."
+            }
+          },
+          {
+            "step": 8,
+            "title": "Closure & Documentation",
+            "content": "Once corrective action is completed and reward is transferred, the case status becomes “Closed.” All digital records (photos, notes, status history) are archived. The 7-day appeal window must close before final archival."
+          },
+          {
+            "step": 9,
+            "title": "Appeal Window (7 Days)",
+            "content": "From the moment the field verification status is updated (Verified or Rejected), a 7-day appeal window opens.\nWho Can Appeal:\n  • Case A (Valid but Field Officer disagrees): Field Officer can appeal to a higher authority; reward is on hold until resolution.\n  • Case B (Invalid but User disagrees): User can tap “Appeal” under the rejected submission within app, upload additional evidence or explanation, and submit before the 7-day window ends.\n  • Case C (Both parties agree): No appeal. Reward (if valid) is processed automatically after 7 days.\nAfter 7 days (if no appeals), case status locks as final (no further edits permitted)."
+          },
+          {
+            "step": 10,
+            "title": "Final Authority",
+            "content": "Appeal decisions are made by designated Appeal Officer(s) at MPEZ HQ. Their verdict is final; no external appeals to toll-free 1912 or other bodies are permitted."
+          }
+        ]
+      },
+      {
+        "id": "reward_structure_recognition",
+        "title": "Reward Structure and Recognition",
+        "purpose": "Describe reward amounts per category and special recognition guidelines.",
+        "reward_matrix": [
+          {
+            "category": "Geo-Coordinates Not Found / Found Incorrect",
+            "reward": 10,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Incorrect Consumer Indexing",
+            "reward": 10,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Excess Load (Domestic)",
+            "reward": 25,
+            "unit": "₹ per kW"
+          },
+          {
+            "category": "Excess Load (Commercial)",
+            "reward": 100,
+            "unit": "₹ per kW"
+          },
+          {
+            "category": "Excess Load (Industrial)",
+            "reward": 100,
+            "unit": "₹ per kW"
+          },
+          {
+            "category": "Excess Load (Agriculture)",
+            "reward": 250,
+            "unit": "₹ per HP"
+          },
+          {
+            "category": "Use Under a Different Tariff",
+            "reward": 500,
+            "unit": "₹ per kW"
+          },
+          {
+            "category": "More Than One Connection in the Same Premises",
+            "reward": 500,
+            "unit": "₹ per connection"
+          },
+          {
+            "category": "Meter Tampering / Bypass",
+            "reward": 500,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Unauthorized Extension of Power Supply",
+            "reward": 500,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Electricity Theft / Illegal Connection / Direct Hooking",
+            "reward": 500,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Incorrect Meter Reading",
+            "reward": 100,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Incorrect Solar Meter Reading",
+            "reward": 100,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Wrong Multiplying Factor (MF) (LT Domestic)",
+            "reward": 10000,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Wrong Multiplying Factor (MF) (LT Commercial)",
+            "reward": 20000,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Wrong Multiplying Factor (MF) (LT Industrial)",
+            "reward": 20000,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Wrong Multiplying Factor (MF) (HT)",
+            "reward": 50000,
+            "unit": "₹ per information"
+          },
+          {
+            "category": "Others",
+            "reward": 250,
+            "unit": "₹ per information"
+          }
+        ],
+        "reward_examples": [
+          {
+            "scenario": "Excess Load (Domestic)",
+            "calculation": "If user reports 3 kW excess in a domestic connection, Reward = 3 kW × ₹ 25 = ₹ 75."
+          },
+          {
+            "scenario": "Excess Load (Agriculture)",
+            "calculation": "If user reports 2 HP excess, Reward = 2 HP × ₹ 250 = ₹ 500."
+          },
+          {
+            "scenario": "Use Under Different Tariff",
+            "calculation": "If consumer uses 2 kW commercially under a domestic meter, Reward = 2 kW × ₹ 500 = ₹ 1,000."
+          }
+        ],
+        "recognition": {
+          "description": "Users who submit multiple valid cases but opt out of cash rewards can be publicly felicitated (with user’s consent) at social events or on social media.",
+          "chatbot_can_answer": [
+            "How do I opt out of cash reward but still get recognition?",
+            "What threshold qualifies me for public felicitation?"
+          ]
+        }
+      },
+      {
+        "id": "privacy_data_security_whistleblower",
+        "title": "Privacy, Data Security & Whistleblower Protection",
+        "purpose": "Detail how V-Mitra protects user data, allows anonymity, and ensures whistleblower safety.",
+        "subsections": [
+          {
+            "id": "data_confidentiality_measures",
+            "title": "Data Confidentiality Measures",
+            "content": "All user data (personal info, reports, photos, GPS coordinates) is encrypted in transit (HTTPS/TLS) and at rest (AES-256 or equivalent). Role-based access:\n- Field Officers only see minimal PII if the user discloses identity; otherwise, the report remains anonymous.\n- Admin Users can view PII for legitimate investigations but access is logged and subject to audit trails.\nNo PII is visible to any external third party; internal staff must follow strict protocols."
+          },
+          {
+            "id": "anonymous_access",
+            "title": "Anonymous Access",
+            "content": "Users can remain fully anonymous by unticking “I agree to disclose my identity.” Anonymous users can still track the status of their own submissions via a unique OTP-protected dashboard or in-app tracking."
+          },
+          {
+            "id": "it_cybersecurity_protocols",
+            "title": "IT & Cybersecurity Protocols",
+            "content": "• Firewalls and intrusion detection systems (IDS) are deployed at the backend.\n• Two-factor authentication (2FA) is mandatory for all internal staff accounts.\n• Regular vulnerability assessments and penetration testing are conducted by third-party auditors.\n• The system complies with the Indian IT Act 2000 and follows GDPR principles for data protection where relevant."
+          },
+          {
+            "id": "whistleblower_protection_compensation",
+            "title": "Whistleblower Protection & Compensation (Internal Breach Penalties)",
+            "content": "If MPEZ staff negligently disclose user identity (a data breach), the user is entitled to compensation:",
+            "compensation_table": [
+              {
+                "category": "Domestic & Agriculture",
+                "compensation": 2500,
+                "unit": "₹"
+              },
+              {
+                "category": "Non-Domestic & Industrial (LT)",
+                "compensation": 5000,
+                "unit": "₹"
+              },
+              {
+                "category": "HT",
+                "compensation": 10000,
+                "unit": "₹"
+              }
+            ],
+            "additional_notes": "Strict disciplinary action is taken against staff found guilty of data misuse. An internal Whistleblower Policy ensures user identities are not revealed during verification. The app’s FAQ section informs users of their data rights and recourse in case of misuse."
+          },
+          {
+            "id": "privacy_faqs",
+            "title": "Chatbot FAQs for Privacy Section",
+            "questions": [
+              "Can I report without giving my name or mobile number?",
+              "What if my identity is revealed by mistake?",
+              "How long is my location data stored, and who can access it?",
+              "What do I do if I suspect data misuse?"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sample_intents_entities",
+        "title": "Sample Chatbot Intents & Entities",
+        "purpose": "Suggestions for how a chatbot might break down user queries into intents/entities based on the user guide’s content.",
+        "intents": [
+          {
+            "intent": "download_install_app",
+            "entities": [
+              "platform"
+            ],
+            "examples": [
+              {
+                "question": "Where can I download V-Mitra on my iPhone?",
+                "answer": "Open the App Store and search “V-Mitra.” It’s compatible with iOS 10 and above."
+              },
+              {
+                "question": "Is there a desktop version?",
+                "answer": "Yes, you can access V-Mitra via MPEZ’s official web portal at [URL]."
+              }
+            ]
+          },
+          {
+            "intent": "register_user",
+            "entities": [
+              "username",
+              "email",
+              "mobile_number",
+              "profile_photo"
+            ],
+            "examples": [
+              {
+                "question": "How do I register?",
+                "answer": "Open V-Mitra, tap “Register,” fill in username, email, mobile number, upload optional photo, then tap “Generate OTP.” Enter the OTP to complete registration."
+              }
+            ]
+          },
+          {
+            "intent": "add_bank_details",
+            "entities": [
+              "name_on_aadhar",
+              "account_number",
+              "ifsc_code",
+              "aadhaar_number"
+            ],
+            "examples": [
+              {
+                "question": "Do I need to add my bank account to report issues?",
+                "answer": "You only need bank details if you want to receive rewards. Go to “Profile” → “Add Bank Account,” enter name as on Aadhar, account number, IFSC code, and Aadhaar number."
+              }
+            ]
+          },
+          {
+            "intent": "search_consumer_by_ivrs",
+            "entities": [
+              "ivrs_number",
+              "search_method"
+            ],
+            "examples": [
+              {
+                "question": "I don’t remember my IVRS; how do I find it?",
+                "answer": "Tap “Submit Information” → “Find IVRS.” You can search by Consumer List (select Circle → Division → DC → Tariff Category), or by tapping your current location on the map."
+              }
+            ]
+          },
+          {
+            "intent": "submit_information_ivrs_available",
+            "entities": [
+              "ivrs_number",
+              "irregularity_type",
+              "photo",
+              "description"
+            ],
+            "examples": [
+              {
+                "question": "I want to report meter tampering for IVRS 1234567890.",
+                "answer": "Enter IVRS 1234567890 → App fetches details → Select “Meter Tampering / Bypass” → Upload a clear photo of the tampered meter → Describe the issue → Submit."
+              }
+            ]
+          },
+          {
+            "intent": "submit_information_ivrs_not_available",
+            "entities": [
+              "irregularity_type",
+              "gps_coordinates",
+              "premise_type",
+              "photo",
+              "description"
+            ],
+            "examples": [
+              {
+                "question": "I saw a dhaba hooking from a pole; no IVRS. How do I report?",
+                "answer": "Tap “Submit Information” → “IVRS Not Available” → Select “Electricity Theft/Illegal Connection” → Choose “Restaurant/Dhaba” as premise type → Upload photo showing hooking wire → Add description → Submit."
+              }
+            ]
+          },
+          {
+            "intent": "irregularity_types_examples",
+            "entities": [
+              "irregularity_type"
+            ],
+            "examples": [
+              {
+                "question": "What counts as “Excess Load”?",
+                "answer": "If the actual load exceeds sanctioned load by >1 kW for domestic connections, by >1 kW for commercial, or >0 kW for agriculture (per HP), you can report “Excess Load.” Upload a photo of installed equipment and estimate wattages."
+              },
+              {
+                "question": "When do I select “Use Under Different Tariff”?",
+                "answer": "If a domestic connection is powering a shop, or an agricultural connection runs a commercial establishment, select “Use Under Different Tariff.” Attach a photo showing business activity."
+              }
+            ]
+          },
+          {
+            "intent": "status_tracking",
+            "entities": [
+              "info_id"
+            ],
+            "examples": [
+              {
+                "question": "How do I check my submission status?",
+                "answer": "Tap “Track Status” on the home screen, find your Info ID, and you’ll see if it’s Pending, In Progress, Resolved, or Rejected. You can tap to view details."
+              }
+            ]
+          },
+          {
+            "intent": "appeal_submission",
+            "entities": [
+              "info_id",
+              "reason_for_appeal",
+              "additional_evidence"
+            ],
+            "examples": [
+              {
+                "question": "My submission was rejected, but I have more proof. How do I appeal?",
+                "answer": "Open the rejected case from “My Submissions,” tap “Appeal,” upload additional photos or docs, explain why you believe it’s valid, and submit before the 7-day window ends."
+              }
+            ]
+          },
+          {
+            "intent": "reward_status_amount",
+            "entities": [
+              "info_id"
+            ],
+            "examples": [
+              {
+                "question": "I reported a tampered meter; how much reward will I get?",
+                "answer": "Meter Tampering/Bypass has a ₹500 reward per valid info. Once your case is Verified and the appeal window closes, the system will transfer ₹500 to your registered bank account."
+              }
+            ]
+          },
+          {
+            "intent": "privacy_anonymity",
+            "entities": [
+              "question_about_privacy"
+            ],
+            "examples": [
+              {
+                "question": "Will my name be shown to the field officers?",
+                "answer": "Only if you check “I agree to disclose my identity.” Otherwise, you remain anonymous; even field officers won’t see your PII."
+              }
+            ]
+          },
+          {
+            "intent": "compensation_data_breach",
+            "entities": [
+              "breach_category"
+            ],
+            "examples": [
+              {
+                "question": "What if my info leaks due to MPEZ negligence?",
+                "answer": "If MPEZ staff negligently expose your identity, you can receive compensation: ₹2,500 for Domestic/Agriculture, ₹5,000 for Non-Domestic/Industrial LT, ₹10,000 for HT."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
