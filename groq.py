@@ -15,7 +15,7 @@ if not GROQ_API_KEY:
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 LLM_MODEL    = "llama3-8b-8192"
 
-st.set_page_config(page_title="🤝 V-Mitra Chatbot", layout="centered")
+st.set_page_config(page_title=" V-Mitra Chatbot", layout="centered")
 
 # ────────────────────────────────
 # 1) Polished CSS + header
@@ -23,7 +23,7 @@ st.set_page_config(page_title="🤝 V-Mitra Chatbot", layout="centered")
 
 
 st.markdown("""
-<style>
+<style> 
 /* Limit the header width to match chat-window and center it */
 .header-bar {
   max-width: 600px;    /* same as your .chat-window max-width */
@@ -290,16 +290,77 @@ html, body, .main, .block-container {
   0% { opacity: .2; }
   50%,100% { opacity: 1; }
 }
+/* ---- CONTACT BOX FLEX VERSION ---- */
+.contact-box-flex {
+  max-width: 700px;
+  margin: 32px auto 0 auto;
+  background: rgba(255,255,255,0.92);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px #3c00e010;
+  padding: 24px 32px;
+  font-family: 'Nunito', 'Montserrat', sans-serif;
+  font-size: 1.08rem;
+  color: #3e348f;
+  text-align: left;
+  border-left: 7px solid #7b2ff2;
+  border-top: 2px solid #f5f7fa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+.contact-details {
+  flex: 2;
+}
+.contact-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 28px;
+  border: 2px solid #7b2ff2;
+  box-shadow: 0 2px 10px #7b2ff222;
+  background: #f9f9fc;
+}
+@media (max-width: 950px) {
+  .contact-box-flex { flex-direction: column; gap: 12px; }
+  .contact-image img { width: 120px; height: 120px; }
+}
 </style>
 
 <div class="header-bar">
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Bot"/>
+  <img src="https://mpez.co.in/static/assets/img/vmitra_logo_latest.jpeg" alt="bot"/>
   <div>
-    <div class="chatbot-title">🤝 V-Mitra Domain Chatbot</div>
-    <div class="chatbot-desc">TaskMate – Your V-Mitra Task Assistant</div>
+    <div class="chatbot-title"> V-Mitra Helpdesk AI ChatBot</div>
+    <div class="chatbot-desc">वी-मित्र एप्लिकेशन सहायक – आपकी ऐप हेल्पडेस्क</div>
+  </div>
+</div> 
+
+
+
+<!-- New Flex Contact Box with Image -->
+<div class="contact-box-flex">
+  <div class="contact-details">
+    <h3>Contact Us</h3>
+    <p>
+      Block No. 7, Shakti Bhawan<br>
+      PO: Vidyut Nagar, Rampur<br>
+      Jabalpur (M.P.) India<br><br>
+      <b>Phone:</b> <a href="tel:18002331266">1800-233-1266</a><br>
+      <b>Email:</b> <a href="mailto:mpez.nidaan@gmail.com">mpez.nidaan@gmail.com</a>
+    </p>
+  </div>
+  <div class="contact-image">
+    <img src="https://mpez.co.in/static/assets/img/vmitra_logo_latest.jpeg" alt="V-Mitra Logo"/>
   </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
