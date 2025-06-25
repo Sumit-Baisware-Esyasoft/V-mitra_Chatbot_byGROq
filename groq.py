@@ -26,19 +26,19 @@ st.markdown("""
 <style> 
 /* Limit the header width to match chat-window and center it */
 .header-bar {
-  max-width: 300px;    /* same as your .chat-window max-width */
+  max-width: 600px;    /* same as your .chat-window max-width */
   margin: 0 auto;      /* center horizontally */
 }
 
 /* Also center the chat-window itself */
 .chat-window {
-  max-width: 300px;
+  max-width: 600px;
   margin: 16px auto;   /* keep a bit of top/bottom margin */
 }
 
 /* (Optional) Make input box the same width too */
 .stChatInput {
-  max-width: 300px !important;
+  max-width: 600px !important;
   margin: 0 auto !important;
 }            
 /* Hide the white chat-window background */
