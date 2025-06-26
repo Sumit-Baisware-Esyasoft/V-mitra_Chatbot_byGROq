@@ -18,42 +18,32 @@ LLM_MODEL    = "llama3-8b-8192"
 st.set_page_config(page_title=" V-Mitra Chatbot", layout="centered")
 
 # ────────────────────────────────
-# 1) Polished CSS + header
+# 1) Polished CSS + header (with mobile fix)
 # ────────────────────────────────
-
 
 st.markdown("""
 <style> 
-/* Limit the header width to match chat-window and center it */
 .header-bar {
-  max-width: 600px;    /* same as your .chat-window max-width */
-  margin: 0 auto;      /* center horizontally */
+  max-width: 600px;
+  margin: 0 auto;
 }
-
-/* Also center the chat-window itself */
 .chat-window {
   max-width: 600px;
-  margin: 16px auto;   /* keep a bit of top/bottom margin */
+  margin: 16px auto;
 }
-
-/* (Optional) Make input box the same width too */
 .stChatInput {
   max-width: 600px !important;
   margin: 0 auto !important;
-}            
-/* Hide the white chat-window background */
+}
 .chat-window {
   background: transparent !important;
   box-shadow: none !important;
   padding: 0 !important;
 }
-
-/* If you want to collapse its container completely: */
 .chat-window > * {
   margin: 0 !important;
   max-width: 100% !important;
 }
-            /* 1) Fix the header at top */
 .header-bar {
   position: fixed;
   top: 0;
@@ -61,22 +51,14 @@ st.markdown("""
   right: 0;
   z-index: 1000;
 }
-
-/* 2) Push the rest of the page down to clear the fixed header */
-/*    Adjust 80px to match your header-bar height + any gap */
 .block-container {
   padding-top: 80px !important;
 }
-
-/* 3) Make only the chat area scroll */
-/*    Calculate: full viewport minus header (80px) minus input box area (e.g. 80px) */
 .chat-window {
   max-height: calc(100vh - 160px) !important;
   overflow-y: auto !important;
-  margin-top: 16px;  /* optional spacing under the header */
+  margin-top: 16px;
 }
-
-/* 4) (Optional) Style the scrollbar inside chat-window */
 .chat-window::-webkit-scrollbar {
   width: 6px;
 }
@@ -85,14 +67,11 @@ st.markdown("""
   border-radius: 3px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Montserrat:wght@700&display=swap');
-
 html, body, .main, .block-container {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
   font-family: 'Nunito', 'Montserrat', sans-serif !important;
   margin: 0; padding: 0;
 }
-
-/* Header */
 .header-bar {
   display: flex;
   align-items: center;
@@ -101,7 +80,7 @@ html, body, .main, .block-container {
   border-radius: 0 0 20px 20px;
   margin-bottom: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,.1);
-  animation: slideDown 0.6s ease-out;
+  animation: slideDown 0.9s ease-out;
 }
 .header-bar img {
   height: 50px;
@@ -117,7 +96,7 @@ html, body, .main, .block-container {
 .header-bar .chatbot-title {
   font-size: 1.9rem;
   color: #fff;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0;
 }
 .header-bar .chatbot-desc {
@@ -125,8 +104,6 @@ html, body, .main, .block-container {
   color: #e0e0e0;
   margin: 4px 0 0 0;
 }
-
-/* Chat pane */
 .chat-window {
   max-width: 600px;
   margin: auto;
@@ -152,8 +129,6 @@ html, body, .main, .block-container {
 .chat-window::-webkit-scrollbar-thumb:hover {
   background: rgba(74,0,224,0.9);
 }
-
-/* Messages */
 .message-row {
   display: flex;
   margin: 8px 0;
@@ -188,7 +163,6 @@ html, body, .main, .block-container {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
-/* Pop effect */
 .bubble::after {
   content: '';
   position: absolute;
@@ -201,8 +175,6 @@ html, body, .main, .block-container {
   transform: translate(-50%,-50%) scale(0);
   animation: pop 0.5s ease-out;
 }
-
-/* Avatars */
 .avatar {
   width: 36px;
   height: 36px;
@@ -220,8 +192,6 @@ html, body, .main, .block-container {
 .avatar:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
-
-/* Input */
 .stChatInput {
   border-radius: 24px!important;
   border: 2px solid #0072ff!important;
@@ -235,8 +205,6 @@ html, body, .main, .block-container {
   border-color: #4a00e0!important;
   box-shadow: 0 4px 16px rgba(0,0,0,.15)!important;
 }
-
-/* Typing indicator */
 .typing-row {
   display: flex;
   align-items: center;
@@ -271,8 +239,6 @@ html, body, .main, .block-container {
 .dot-flashing:before { left: 0; animation-delay: 0s; }
 .dot-flashing span  { left:10px; animation-delay: .3s; }
 .dot-flashing:after { left:20px; animation-delay: .6s; }
-
-/* Animations */
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -299,7 +265,7 @@ html, body, .main, .block-container {
   box-shadow: 0 6px 24px #3c00e010;
   padding: 24px 32px;
   font-family: 'Nunito', 'Montserrat', sans-serif;
-  font-size: 1.08rem;
+  font-size: 1rem;
   color: #3e348f;
   text-align: left;
   border-left: 7px solid #7b2ff2;
@@ -331,6 +297,73 @@ html, body, .main, .block-container {
   .contact-box-flex { flex-direction: column; gap: 12px; }
   .contact-image img { width: 120px; height: 120px; }
 }
+
+/* ------ MOBILE FRIENDLY SECTION ------ */
+@media (max-width: 600px) {
+  .header-bar {
+    padding: 10px 8px !important;
+    border-radius: 0 0 14px 14px !important;
+    min-height: 54px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .header-bar img {
+    height: 32px !important;
+    margin-right: 0 !important;
+    margin-bottom: 3px !important;
+    border-width: 2px !important;
+  }
+  .header-bar .chatbot-title {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0 !important;
+    margin-top: 2px !important;
+  }
+  .header-bar .chatbot-desc {
+    font-size: 0.81rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    color: #e0e0e0 !important;
+  }
+  .chat-window {
+    max-width: 98vw !important;
+    border-radius: 10px !important;
+    min-height: 60vh !important;
+    padding: 8px !important;
+    margin-top: 10px !important;
+  }
+  .bubble {
+    font-size: 0.98rem !important;
+    padding: 10px 12px !important;
+    border-radius: 14px !important;
+  }
+  .avatar {
+    width: 28px !important;
+    height: 28px !important;
+    margin: 0 6px !important;
+  }
+  .stChatInput {
+    max-width: 98vw !important;
+    padding: 9px !important;
+    font-size: 0.98rem !important;
+  }
+  .contact-box-flex {
+    flex-direction: column !important;
+    padding: 12px 8px !important;
+    gap: 12px !important;
+    max-width: 98vw !important;
+    border-radius: 12px !important;
+  }
+  .contact-image img {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 18px !important;
+  }
+  .block-container {
+    padding-top: 65px !important;
+  }
+}
 </style>
 
 <div class="header-bar">
@@ -340,8 +373,6 @@ html, body, .main, .block-container {
     <div class="chatbot-desc">वी-मित्र एप्लिकेशन सहायक – आपकी ऐप हेल्पडेस्क</div>
   </div>
 </div> 
-
-
 
 <!-- New Flex Contact Box with Image -->
 <div class="contact-box-flex">
@@ -360,10 +391,6 @@ html, body, .main, .block-container {
   </div>
 </div>
 """, unsafe_allow_html=True)
-
-
-
-
 
 # ────────────────────────────────
 # 2) Load KB & embedder
@@ -390,15 +417,67 @@ embedder, embs = init_embedder()
 # 3) System prompt
 # ────────────────────────────────
 system_prompt = """
-You are V-Mitra ChatBot, the official AI assistant for the V-Mitra app user citizen audit app.
-Use the given context to answer precisely, courteously, and professionally.
+You are V-Mitra ChatBot, the official AI assistant for the V-Mitra citizen audit app by MPEZ. Your role is to help users with anything about V-Mitra: how to use the app, reporting irregularities, understanding rewards, privacy, security, and anything found in the official V-Mitra User Guide or knowledge base.
 
-RULES:
-1. DOMAIN ONLY: Only answer V-Mitra questions; otherwise ask to reframe.
-2. CONTEXT USAGE: Summarize the context (1–2 lines) then answer.
-3. ALWAYS ANSWER: Provide best-guess if unsure, citing the context.
-4. SAFETY FIRST: Refuse harmful requests politely.
-5. STYLE: Use “Step 1, Step 2…” for instructions.
+**Your goals:**
+- Make every answer friendly, human, and natural. It should feel like a helpful person is chatting, not a robot.
+- Use plain, easy language. Prefer short, simple sentences.
+- Always reply in the user’s language. If user messages in Hindi, reply in Hindi. If user uses Hinglish or mixes languages, reply in the same style.  
+- If you’re unsure of the language, reply in both English and the detected Indian language.
+- Strictly answer only about V-Mitra. If a question is unrelated, politely guide the user to rephrase or explain you are only for V-Mitra help.
+- Never fake or make up information. If something isn’t in the guide or knowledge base, say so and suggest where user can get help (like the MPEZ toll-free, official website, or app support).
+- For instructions, use casual step-by-step: “First, open the app…”, “Then, tap…”, “After that…”, “That’s it!”
+- Use real-life examples where possible, especially when the user seems confused.
+- If the user seems frustrated or lost, add empathy: “Don’t worry, this happens a lot”, “I’m here to help you”, etc.
+- When replying, start with a natural intro: “Sure, I can help!”, “Absolutely, here’s what to do…”, “यह आसान है, मैं बताता हूँ…”, etc.
+- Always add practical tips if needed: “Make sure your internet is on…”, “You can also take a photo and upload…”, “If you can’t find your IVRS, tap ‘Find IVRS’ in the app…”
+- Do not use “Summary:” or “Context:” in your output. Instead, weave context naturally into your answers.
+- If the user needs to do something on the app, guide as if talking to a friend over the phone.
+- Avoid technical jargon, unless user asks for it.
+- Always keep the conversation friendly, encouraging, and easy to follow.
+- If user requests information in another language, reply accordingly, and ask them if they prefer English or that language for future responses.
+
+**Sample dialogue styles:**
+- User: "How do I add my bank account for rewards?"
+  Bot: "Great question! You just need to open your V-Mitra app, tap on your profile, and look for 'Add Bank Account.' Fill in your name (like on Aadhaar), your account number, IFSC code, and Aadhaar number. Double check your details so you get your reward directly to your bank!"
+
+- User: "मैं रिपोर्ट कैसे करूँ?"
+  Bot: "बहुत अच्छा सवाल! रिपोर्ट करने के लिए V-Mitra ऐप खोलिए, 'Submit Information' पर टैप करिए, फिर IVRS नंबर डालिए या 'Find IVRS' से ढूंढिए। अब जो भी गड़बड़ी दिख रही है, वो सिलेक्ट करिए, फोटो अपलोड कीजिए, और सबमिट कर दीजिए! कोई दिक्कत हो तो पूछिए!"
+
+- User: "What if I don’t want to share my name?"
+  Bot: "No worries! V-Mitra lets you report issues without showing your name. Just untick the box that says 'I agree to disclose my identity' before submitting your info. Your details will stay private."
+
+- User: "App kasa download karu? (in Marathi)"
+  Bot: "तुम्ही 'V-Mitra' अ‍ॅप Google Play Store किंवा Apple App Store वर शोधू शकता. फक्त 'V-Mitra' टाका, डाउनलोड करा आणि वापरायला सुरू करा!"
+
+
+- User: "App kaise download karein?"  
+  Bot: "आप अपने Android या iPhone पर Play Store या App Store में 'V-Mitra' सर्च करके डाउनलोड कर सकते हैं। बस इंस्टॉल करें, और शुरू करें!"
+
+**Tone:** Always warm, encouraging, never cold. Always help user feel comfortable and confident using V-Mitra.
+
+**Language:** Match user’s language. If Hindi, reply fully in Hindi (very simple words, avoid technical terms). If English, reply in easy English. If Hinglish or other, reply in same. If any other Indian language, reply in that language. If unsure, reply in both English and the detected language.
+
+**If asked something outside V-Mitra domain:**  
+"Sorry, I can only help with V-Mitra app related queries. For other electricity complaints, please call 1912 or visit the official MPEZ website."
+
+**Never say:** “I am an AI language model.” Just answer as a helpful human assistant would.
+
+**If user seems stuck/confused:**  
+"It's okay, take your time! If you have trouble, let me know which step, and I’ll guide you with extra detail
+Or you can Contact direct to our 
+Contact Us
+Block No. 7, Shakti Bhawan
+PO: Vidyut Nagar, Rampur
+Jabalpur (M.P.) India 
+Phone: 1800-233-1266
+Email: mpez.nidaan@gmail.com"
+
+**Always finish with:**  
+"If you need more help, just ask!" (in same language as user)
+
+---
+**[End of system prompt]**
 """
 
 # ────────────────────────────────
