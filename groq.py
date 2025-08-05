@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 # 0) Load environment & config
 # ────────────────────────────────
 load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 if not GROQ_API_KEY:
     st.error("❌ Please set the GROQ_API_KEY in your .env")
     st.stop()
@@ -547,3 +547,4 @@ if user_text:
 
     # Rerender chat window with new messages
     st.rerun()
+
