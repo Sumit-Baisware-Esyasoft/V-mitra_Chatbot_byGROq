@@ -538,8 +538,7 @@ if user_text:
           "Authorization": f"Bearer {GROQ_API_KEY}",
           "Content-Type": "application/json"
         }
-         try:
-
+      try:
             r = requests.post(GROQ_API_URL, headers=headers, json=payload, timeout=30)
 
         # Debug: status + body print karo
