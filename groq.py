@@ -13,7 +13,7 @@ if not GROQ_API_KEY:
     st.error("❌ Please set the GROQ_API_KEY in your .env")
     st.stop()
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-LLM_MODEL    = "llama3-70b-8192"
+LLM_MODEL    = "llama-3.1-70b-versatile"
 
 st.set_page_config(page_title=" V-Mitra Chatbot", layout="centered")
 
@@ -570,6 +570,7 @@ if user_text:
 
     # Rerender chat window with new messages
     st.rerun()
+
 
 
 
