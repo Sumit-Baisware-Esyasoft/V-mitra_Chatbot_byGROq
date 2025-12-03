@@ -538,17 +538,18 @@ if user_text:
           "Authorization": f"Bearer {GROQ_API_KEY}",
           "Content-Type": "application/json"
         }
-           try:
-        r = requests.post(GROQ_API_URL, headers=headers, json=payload, timeout=30)
+         try:
+
+            r = requests.post(GROQ_API_URL, headers=headers, json=payload, timeout=30)
 
         # Debug: status + body print karo
-        st.write("Groq status code:", r.status_code)
-        st.write("Groq raw response:", r.text)
+            st.write("Groq status code:", r.status_code)
+            st.write("Groq raw response:", r.text)
 
-        r.raise_for_status()  # yahi HTTPError throw kar raha hai
+            r.raise_for_status()  # yahi HTTPError throw kar raha hai
 
-        data = r.json()
-        reply = data["choices"][0]["message"]["content"].strip()
+            data = r.json()
+            reply = data["choices"][0]["message"]["content"].strip()
 
     except requests.exceptions.HTTPError as e:
         st.error(f"Groq HTTP error: {e}")
@@ -564,10 +565,12 @@ if user_text:
         st.stop()
 
 
+
     # Append bot message
     st.session_state.history.append(("bot", reply))
 
     # Rerender chat window with new messages
     st.rerun()
+
 
 
